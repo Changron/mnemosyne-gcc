@@ -1,0 +1,11 @@
+--- SConscript	2018-08-29 15:03:57.799852711 +0800
++++ SConscript_new	2018-08-29 15:03:46.779727674 +0800
+@@ -40,6 +40,8 @@
+ buildEnv.Append(CPPPATH = ['#library/mcore/include/hal'])
+ buildEnv.Append(CPPPATH = ['#library/mcore/include/log'])
+ buildEnv.Append(CPPPATH = ['#library/pmalloc/include'])
++homePath = os.environ.get('HOME','default')
++buildEnv.Append(CPPPATH = ['%s/opt/include' % homePath])
+ 
+ # Just include everything
+ buildEnv.Append(CPPPATH = ['#library/pmalloc/include/alps/'])

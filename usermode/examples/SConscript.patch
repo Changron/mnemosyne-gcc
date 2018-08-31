@@ -1,0 +1,14 @@
+--- SConscript	2018-08-29 16:01:09.602987419 +0800
++++ SConscript_new	2018-08-29 16:01:03.090913091 +0800
+@@ -16,8 +16,10 @@
+ examplesEnv.Append(LIBS = [pmallocLibrary])
+ examplesEnv.Append(LIBS = ['alps'])
+ examplesEnv.Append(LIBPATH = ['#library/pmalloc/include/alps/build/src'])
++homePath = os.environ.get('HOME','default')
++examplesEnv.Append(LIBPATH = ['%s/opt/lib' % homePath])
+ # RPATH is for runtime library search
+-examplesEnv.Append(RPATH = ['library/pmalloc/include/alps/build/src'])
++examplesEnv.Append(RPATH = ['library/pmalloc/include/alps/build/src', '%s/opt/lib' % homePath])
+ 
+ examplesEnv.Append(LIBS = ['pthread'])
+ examplesEnv.Append(CCFLAGS = ' -O0 -g')

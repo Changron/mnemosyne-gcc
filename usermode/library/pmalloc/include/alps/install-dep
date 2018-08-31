@@ -56,7 +56,6 @@ install_l4tm() {
   sudo apt-get install \
     cmake \
     libattr1-dev \
-    libboost-all-dev \
     libevent-dev \
     libfam-atomic2 \
     libfam-atomic2-dbg \

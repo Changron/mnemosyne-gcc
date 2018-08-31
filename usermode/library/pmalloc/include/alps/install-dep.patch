@@ -1,0 +1,10 @@
+--- install-dep	2018-08-29 14:19:50.218000711 +0800
++++ install-dep-new	2018-08-29 14:34:48.884246647 +0800
+@@ -56,7 +56,6 @@
+   sudo apt-get install \
+     cmake \
+     libattr1-dev \
+-    libboost-all-dev \
+     libevent-dev \
+     libfam-atomic2 \
+     libfam-atomic2-dbg \

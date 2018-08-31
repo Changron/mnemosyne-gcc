@@ -40,6 +40,8 @@ buildEnv.Append(CPPPATH = ['#library/mcore/include'])
 buildEnv.Append(CPPPATH = ['#library/mcore/include/hal'])
 buildEnv.Append(CPPPATH = ['#library/mcore/include/log'])
 buildEnv.Append(CPPPATH = ['#library/pmalloc/include'])
+homePath = os.environ.get('HOME','default')
+buildEnv.Append(CPPPATH = ['%s/opt/include' % homePath])
 
 # Just include everything
 buildEnv.Append(CPPPATH = ['#library/pmalloc/include/alps/'])

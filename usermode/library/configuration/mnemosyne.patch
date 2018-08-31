@@ -1,0 +1,33 @@
+--- mnemosyne.py	2018-08-29 16:09:02.676386516 +0800
++++ mnemosyne-new.py	2018-08-29 16:04:04.192980076 +0800
+@@ -51,6 +51,8 @@
+ 			self['CXX'] = mainEnv['CXX'] 
+             
+ 		if mainEnv is not None and mainEnv['VERBOSE'] == False:
++                        pass
++                        """
+ 			self.Replace(
+ 			                 CCCOMSTR = '(COMPILE)  $SOURCES',
+ 			                CXXCOMSTR = '(COMPILE)  $SOURCES',
+@@ -62,9 +64,10 @@
+ 			               LINKCOMSTR = '(LINK)     $TARGET',
+ 			             SHLINKCOMSTR = '(LINK)     $TARGET'
+ 				    )
+-
++                        """
+ 	def set_verbosity(self):
+-
++                pass
++                """
+ 		# Make output pretty.
+ 		if not self['VERBOSE']:
+ 			self.Replace(
+@@ -78,7 +81,7 @@
+ 			               LINKCOMSTR = '(LINK)     $TARGET',
+ 			             SHLINKCOMSTR = '(LINK)     $TARGET'
+ 				    )
+-
++                """
+ 	def _GetConfigurationVariables(self):
+ 		"""
+ 			Retrieve and define help variables for configuration variables.

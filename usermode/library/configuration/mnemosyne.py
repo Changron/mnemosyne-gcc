@@ -51,6 +51,8 @@ class Environment(SCons.Environment.Environment):
 			self['CXX'] = mainEnv['CXX'] 
             
 		if mainEnv is not None and mainEnv['VERBOSE'] == False:
+                        pass
+                        """
 			self.Replace(
 			                 CCCOMSTR = '(COMPILE)  $SOURCES',
 			                CXXCOMSTR = '(COMPILE)  $SOURCES',
@@ -62,9 +64,10 @@ class Environment(SCons.Environment.Environment):
 			               LINKCOMSTR = '(LINK)     $TARGET',
 			             SHLINKCOMSTR = '(LINK)     $TARGET'
 				    )
-
+                        """
 	def set_verbosity(self):
-
+                pass
+                """
 		# Make output pretty.
 		if not self['VERBOSE']:
 			self.Replace(
@@ -78,7 +81,7 @@ class Environment(SCons.Environment.Environment):
 			               LINKCOMSTR = '(LINK)     $TARGET',
 			             SHLINKCOMSTR = '(LINK)     $TARGET'
 				    )
-
+                """
 	def _GetConfigurationVariables(self):
 		"""
 			Retrieve and define help variables for configuration variables.

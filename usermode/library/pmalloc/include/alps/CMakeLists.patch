@@ -1,0 +1,12 @@
+--- CMakeLists.txt	2018-08-29 13:55:04.201095583 +0800
++++ CMakeLists_new.txt	2018-08-29 14:29:19.552465554 +0800
+@@ -23,7 +23,8 @@
+ include(cmake/internal_utils.cmake)
+ 
+ # compiler flags for all build types
+-set(CMAKE_CXX_FLAGS "-std=c++11")
++set(CMAKE_CXX_FLAGS "-std=c++11 -I$ENV{HOME}/opt/include -L$ENV{HOME}/opt/lib")
++set(Boost_INCLUDE_DIR "$ENV{HOME}/opt/include")
+ 
+ # compiler flags for different build types
+ set(CMAKE_CXX_FLAGS_DEBUG "-Wall -O0 -g")

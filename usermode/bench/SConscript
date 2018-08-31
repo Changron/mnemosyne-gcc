@@ -1,3 +1,4 @@
+import os
 Import('mtmLibrary')
 Import('mcoreLibrary')
 Import('pmallocLibrary')
@@ -31,11 +32,14 @@ benchEnv.Append(LIBS = [pmallocLibrary])
 benchEnv.Append(LIBS = ['pthread'])
 benchEnv.Append(LIBS = ['alps'])
 benchEnv.Append(LIBPATH = ['#library/pmalloc/include/alps/build/src'])
+homePath = os.environ.get('HOME','default')
+benchEnv.Append(LIBPATH = ['%s/opt/lib' % homePath])
+
 
 # RPATH is the path for library search during runtime.
 # It is baked into the executable so you don't need the 
 # LD_LIBRARY_PATH crap.
-benchEnv.Append(RPATH = ['library/pmalloc/include/alps/build/src'])
+benchEnv.Append(RPATH = ['library/pmalloc/include/alps/build/src', '%s/opt/lib' % homePath])
 
 Export('benchEnv')
 
